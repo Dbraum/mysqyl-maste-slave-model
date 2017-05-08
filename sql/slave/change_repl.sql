@@ -16,9 +16,8 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-change master to master_host='112.74.112.195',
-master_user='repl',
-master_password='ab-mysql',
-MASTER_AUTO_POSITION = 1;
+/*
+change master to master_host='112.74.112.195',master_user='repl',master_password='ab-mysql',MASTER_AUTO_POSITION = 1;
 start slave;
 show slave status;
+*/
