@@ -16,7 +16,7 @@ docker run -d --restart=on-failure:5 --name mysql-slave \
               -v $PWD/sql/slave:/docker-entrypoint-initdb.d \
               -v $PWD/data:/var/lib/mysql \
               -v $PWD/logs:/var/log \
-              mysql:5.7.12 --server_id=2 --skip-slave-start --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+              mysql:5.7.12 --server_id=3 --skip-slave-start --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 
 
 docker logs -f mysql-slave
