@@ -37,7 +37,7 @@ show master status\G;
 
 change master to master_host='112.74.112.195',
 master_user='repl',
-master_password='ab-mysql'；
+master_password='ab-mysql';
 
 show slave status\G;
 start slave;
