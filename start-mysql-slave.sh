@@ -13,7 +13,6 @@ docker run -d --restart=on-failure:5 --name mysql-slave \
               -e "MYSQL_ROOT_PASSWORD=my-secret-ab" \
               -e "MYSQL_DATABASE=appbricks" \
               -v $PWD/conf/master-slave:/etc/mysql/conf.d \
-              -v $PWD/sql/slave:/docker-entrypoint-initdb.d \
               -v $PWD/data:/var/lib/mysql \
               -v $PWD/logs:/var/log \
               mysql:5.7.12 --server_id=3 --skip-slave-start --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
