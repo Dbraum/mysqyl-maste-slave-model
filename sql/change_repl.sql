@@ -28,16 +28,12 @@ stop slave;
 reset slave;
 
 -- 为了设置gtid_purged，必须先清除gtid_executed。
-reset master;
 -- 这个gtid set是主库的gtid_executed。
 -- set global gtid_purged='146ca884-97f0-11e5-aa16-50e54948b96b:1-472';
 
-show global variables like '%GTID%';
-show master status\G;
 
 change master to master_host='112.74.112.195',
 master_user='repl',
 master_password='ab-mysql';
-
-show slave status\G;
 start slave;
+show slave status\G
