@@ -22,7 +22,6 @@ start slave;
 show slave status\G;
 */
 -- 避免和master数据库冲突
-drop database if exists mysql;
 
 
 stop slave;
@@ -38,8 +37,7 @@ show master status\G;
 
 change master to master_host='112.74.112.195',
 master_user='repl',
-master_password='ab-mysql',
-MASTER_AUTO_POSITION = 1;
+master_password='ab-mysql'；
 
 show slave status\G;
 start slave;
